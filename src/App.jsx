@@ -1,6 +1,7 @@
 import { useState , useEffect} from 'react'
 import TodoItems from './components/TodoItems.jsx'
 function App() {
+  const input = document.querySelector('input');
   const [task,setTask ]= useState("");
   const [tasks,setTasks] = useState(JSON.parse(localStorage.getItem('tasks')) ? JSON.parse(localStorage.getItem('tasks')) : [] );
   const tasksDyn = [...tasks];
@@ -18,7 +19,9 @@ function App() {
       done:false
     }
     tasksDyn.push(taskAdd);
-    setTasks(tasksDyn);
+    setTasks(tasksDyn)
+    input.value = "";
+    setTask("");
   }
   // 
   const deleteTask = (id)=>{
