@@ -51,7 +51,7 @@ function App() {
             <h1 className="text-gray-800 text-lg font-bold">Todo List</h1>
             <form className="flex mt-4" onSubmit={addTask}>
               
-                <input className="shadow appearance-none border rounded w-full py-2 px-3 mr-4 text-gray-800" placeholder="Add Todo" onChange={handleTask} />
+                <input required className="shadow appearance-none border rounded w-full py-2 px-3 mr-4 text-gray-800" placeholder="Add Todo" onChange={handleTask} />
                 <button type='submit' className="flex-no-shrink p-2 border-2 rounded text-teal border-teal-500 hover:text-white hover:bg-teal-500">Add</button>
             </form>
         </div>
